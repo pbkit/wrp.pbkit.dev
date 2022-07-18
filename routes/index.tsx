@@ -19,10 +19,16 @@ export default function Home() {
         />
       </Head>
       <div class={tw`min-h-screen flex flex-col justify-between`}>
-        <div class={tw` flex flex-col gap-4`}>
+        <div class={tw`flex flex-col gap-4`}>
           <section
             class={tw`p-4 max-w-screen-lg tracking-tight bg-[#00000044]`}
-          ></section>
+          >
+            ⚠️ Working in progress. For WRP docs, see{' '}
+            <a href="https://pbkit.dev" class={tw`text-amber-500`}>
+              pbkit docs
+            </a>{' '}
+            instead.
+          </section>
           <section class={tw`flex flex-col p-4 max-w-screen-lg tracking-tight`}>
             <div class={tw`flex flex-col`}>
               <div class={tw`flex justify-between`}>
