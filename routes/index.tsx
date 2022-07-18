@@ -18,23 +18,19 @@ export default function Home() {
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard.css"
         />
       </Head>
-      <div class={tw`min-h-screen flex flex-col justify-between`}>
-        <div class={tw`flex flex-col gap-4`}>
-          <section
-            class={tw`p-4 max-w-screen-lg tracking-tight bg-[#00000044]`}
-          >
-            ⚠️ Working in progress. For WRP docs, see{' '}
-            <a href="https://pbkit.dev" class={tw`text-amber-500`}>
-              pbkit docs
-            </a>{' '}
-            instead.
-          </section>
-          <section class={tw`flex flex-col p-4 max-w-screen-lg tracking-tight`}>
+      <section class={tw`p-4 tracking-tight bg-[#00000044]`}>
+        ⚠️ Working in progress. For WRP docs, see{' '}
+        <a href="https://pbkit.dev" class={tw`text-amber-500`}>
+          pbkit docs
+        </a>{' '}
+        instead.
+      </section>
+      <div class={tw`min-h-screen flex flex-col items-center justify-between`}>
+        <div class={tw`flex flex-col max-w-screen-lg w-full items-stretch`}>
+          <section class={tw`flex flex-col p-4 tracking-tight`}>
             <div class={tw`flex flex-col`}>
               <div class={tw`flex justify-between`}>
-                <h1
-                  class={tw`text(4xl sm:6xl lg:8xl gray-200) font-extrabold mb-2`}
-                >
+                <h1 class={tw`text(4xl sm:6xl gray-200) font-extrabold mb-2`}>
                   <span
                     class={tw`text-transparent bg-clip-text bg-gradient-to-br from-amber-200 to-red-600 animate-gradient-x bg-repeat`}
                   >
@@ -42,14 +38,15 @@ export default function Home() {
                   </span>{' '}
                   🌯
                 </h1>
-                <div>
+                <div class={tw`flex gap-6 items-center`}>
+                  <a class={tw`text(xl sm:2xl) font-bold`}>Docs</a>
                   <a
                     href="https://github.com/pbkit/wrp-ts"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <svg
-                      class={tw`h(8 sm:12 lg:16)`}
+                      class={tw`h(8 sm:12)`}
                       viewBox="2 2 20 20"
                       fill="none"
                       aria-hidden="true"
@@ -65,39 +62,51 @@ export default function Home() {
                 </div>
               </div>
               <p
-                class={tw`text(2xl sm:3xl lg:4xl gray-200) font-bold tracking-tighter`}
+                class={tw`text(2xl sm:3xl gray-200) font-bold tracking-tighter`}
               >
                 Webview<span class={tw`text-gray-300`}>/Worker</span> Request
                 Protocol
               </p>
             </div>
-            <p class={tw`text(xl sm:2xl lg:3xl gray-400) font-bolder`}>
+            <p class={tw`text(xl sm:2xl gray-400) font-bolder`}>
               Develop Webview faster powered by Protocol Buffers
             </p>
           </section>
           <section
-            class={tw`flex flex-col items-end p-4 max-w-screen-lg tracking-tight text-right`}
+            class={tw`flex flex-col items-end p-4 tracking-tight text-right`}
           >
-            <p class={tw`text(xl sm:2xl lg:3xl gray-200) font-bold`}>
+            <p class={tw`text(xl sm:2xl gray-200) font-bold`}>
               Supports{' '}
               <span class={tw`text-orange-300`}>Web, iOS, Android</span> out of
               the box
             </p>
-            <p class={tw`text(xl sm:2xl lg:3xl gray-200) font-bold`}>
+            <p class={tw`text(xl sm:2xl gray-200) font-bold`}>
               <span class={tw`text-orange-300`}>Schema first development</span>{' '}
               using Protocol Buffers
             </p>
-            <p class={tw`text(xl sm:2xl lg:3xl gray-200) font-bold`}>
+            <p class={tw`text(xl sm:2xl gray-200) font-bold`}>
               Provides <span class={tw`text-orange-300`}>Remote DevTools</span>{' '}
               for local app development
             </p>
           </section>
-          <section class={tw`flex justify-center`}>
+          <section
+            class={tw`flex justify-center gap-4 p-4 tracking-tight text-right`}
+          >
             <button
-              class={tw`px-8 py-4 rounded-full bg-gradient-to-br from-amber-200 to-red-500 text(l sm:xl lg:2xl black) font-bold`}
+              class={tw`px-6 py-3 rounded-full bg-gradient-to-br from-amber-200 to-red-500 text(l sm:xl black) font-bold`}
             >
               Watch example →
             </button>
+            <button
+              class={tw`px-6 py-3 rounded-full bg-gradient-to-br from-amber-200 to-red-500 text(l sm:xl black) font-bold`}
+            >
+              Get started →
+            </button>
+          </section>
+          <section class={tw`flex flex-col p-4 tracking-tight text-right`}>
+            <p class={tw`text(xl sm:2xl gray-300)`}>
+              Web: TypeScript, React, Jotai
+            </p>
           </section>
         </div>
         <Footer />
