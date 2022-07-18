@@ -44,7 +44,7 @@ export const config: Configuration = {
     },
   },
   preflight: {
-    body: apply`bg-gray-900 text-white min-h-full`,
+    body: apply`bg-gray-900 text-white min-h-screen`,
   },
 };
 if (IS_BROWSER) setup(config);

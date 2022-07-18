@@ -7,7 +7,7 @@ import Footer from '../components/Footer.tsx';
 
 export default function Home() {
   return (
-    <>
+    <div class={tw`flex flex-col min-h-screen`}>
       <Head>
         <title>WRP 🌯 - Webview/worker request protocol</title>
         <meta name="description" content="Webview/worker request protocol" />
@@ -25,7 +25,7 @@ export default function Home() {
         </a>{' '}
         instead.
       </section>
-      <div class={tw`min-h-screen flex flex-col items-center justify-between`}>
+      <div class={tw`flex flex-col items-center justify-between flex-grow`}>
         <div class={tw`flex flex-col max-w-screen-lg w-full items-stretch`}>
           <section class={tw`flex flex-col p-4 tracking-tight`}>
             <div class={tw`flex flex-col`}>
@@ -103,14 +103,23 @@ export default function Home() {
               Get started →
             </button>
           </section>
-          <section class={tw`flex flex-col p-4 tracking-tight text-right`}>
-            <p class={tw`text(xl sm:2xl gray-300)`}>
+          <section class={tw`flex flex-col p-4 tracking-tight`}>
+            <p class={tw`text(l sm:xl gray-300)`}>
               Web: TypeScript, React, Jotai
+            </p>
+            <p class={tw`text(l sm:xl gray-300)`}>
+              iOS: Swift, SwiftUI, TCA(Composable Architecture)
+            </p>
+            <p class={tw`text(l sm:xl gray-300)`}>
+              Android: Kotlin, Jetpack Compose
+            </p>
+            <p class={tw`text(l sm:xl gray-300)`}>
+              Client/Server code-generation with pbkit (all-in-one)
             </p>
           </section>
         </div>
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
