@@ -17,13 +17,19 @@ export default function Home() {
           crossOrigin="true"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard.css"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        />
       </Head>
       <section class={tw`p-4 tracking-tight bg-[#00000044]`}>
-        ⚠️ Working in progress. For WRP docs, see{' '}
-        <a href="https://pbkit.dev" class={tw`text-amber-500`}>
-          pbkit docs
-        </a>{' '}
-        instead.
+        <p class={tw`max-w-screen-lg mx-auto px-4`}>
+          ⚠️ Working in progress. For WRP docs, see{' '}
+          <a href="https://pbkit.dev" class={tw`text-amber-500`}>
+            pbkit docs
+          </a>{' '}
+          instead.
+        </p>
       </section>
       <div class={tw`flex flex-col items-center justify-between flex-grow`}>
         <div class={tw`flex flex-col max-w-screen-lg w-full items-stretch`}>
@@ -77,16 +83,16 @@ export default function Home() {
           >
             <p class={tw`text(xl sm:2xl gray-200) font-bold`}>
               Supports{' '}
-              <span class={tw`text-orange-300`}>Web, iOS, Android</span> out of
-              the box
+              <span class={tw`text-orange-300`}>Web, iOS, Android</span>
+              <span> out of the box</span>
             </p>
             <p class={tw`text(xl sm:2xl gray-200) font-bold`}>
-              <span class={tw`text-orange-300`}>Schema first development</span>{' '}
-              using Protocol Buffers
+              <span class={tw`text-orange-300`}>Schema first development</span>
+              <span> using Protocol Buffers</span>
             </p>
             <p class={tw`text(xl sm:2xl gray-200) font-bold`}>
-              Provides <span class={tw`text-orange-300`}>Remote DevTools</span>{' '}
-              for local app development
+              Provides <span class={tw`text-orange-300`}>Remote DevTools</span>
+              <span> for local app development</span>
             </p>
           </section>
           <section
@@ -103,17 +109,59 @@ export default function Home() {
               Get started →
             </button>
           </section>
-          <section class={tw`flex flex-col p-4 tracking-tight`}>
-            <p class={tw`text(l sm:xl gray-300)`}>
-              Web: TypeScript, React, Jotai
+          <section class={tw`flex flex-col p-4 tracking-tight gap-4`}>
+            <h1 class={tw`text(2xl sm:3xl) font-extrabold`}>Libraries</h1>
+            <div class={tw`flex gap-4 flex-col sm:flex-row`}>
+              <a
+                href="https://github.com/pbkit/wrp-ts"
+                target="_blank"
+                class={tw`text(xl sm:2xl) font-bold p-6 bg-[#00000066]`}
+              >
+                <p class={tw`text-blue-400 flex items-center gap-2`}>
+                  <img
+                    class={tw`inline w(5 sm:6)`}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                  />
+                  Web
+                </p>
+                <p class={tw`text-gray-300`}>React, Jotai</p>
+              </a>
+              <a
+                href="https://github.com/pbkit/wrp-swift"
+                target="_blank"
+                class={tw`text(xl sm:2xl) font-bold p-6 bg-[#00000066]`}
+              >
+                <p class={tw`text-red-400 flex items-center gap-2`}>
+                  <img
+                    class={tw`inline w(5 sm:6)`}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
+                  />
+                  iOS
+                </p>
+                <p class={tw`text-gray-300`}>
+                  SwiftUI, TCA(Composable Architecture)
+                </p>
+              </a>
+              <a
+                href="https://github.com/pbkit/wrp-kt"
+                target="_blank"
+                class={tw`text(xl sm:2xl) font-bold p-6 bg-[#00000066]`}
+              >
+                <p class={tw`text-green-400 flex items-center gap-2`}>
+                  <img
+                    class={tw`inline w(5 sm:6)`}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                  />
+                  Android
+                </p>
+                <p class={tw`text-gray-300`}>Jetpack Compose</p>
+              </a>
+            </div>
+            <h1 class={tw`text(2xl sm:3xl) font-extrabold`}>Features</h1>
+            <p class={tw`text(xl sm:2xl gray-300)`}>
+              Pre-define messages and rpcs with Protocol buffers
             </p>
-            <p class={tw`text(l sm:xl gray-300)`}>
-              iOS: Swift, SwiftUI, TCA(Composable Architecture)
-            </p>
-            <p class={tw`text(l sm:xl gray-300)`}>
-              Android: Kotlin, Jetpack Compose
-            </p>
-            <p class={tw`text(l sm:xl gray-300)`}>
+            <p class={tw`text(xl sm:2xl gray-300)`}>
               Client/Server code-generation with pbkit (all-in-one)
             </p>
           </section>
