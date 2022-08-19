@@ -5,7 +5,7 @@ pbkit은 pollapo 패키지 매니저와 Protocol Buffers 개발 툴링인 pb cli
 
 ### homebrew로 설치하기
 
-```sh
+```bash
 brew install pbkit/tap/pbkit
 ```
 

@@ -13,12 +13,14 @@ TypeScript 패키지는 세개의 NPM 라이브러리들로 구성되어 있습�
 
 ### yarn으로 설치하기
 
-```sh
+```bash
 yarn add @pbkit/wrp @pbkit/wrp-react @pbkit/wrp-jotai
 ```
 
 만약 [jotai](https://jotai.org)를 설치하지 않았다면 jotai도 함께 설치해주세요.
 
-```sh
+```bash
 yarn add jotai
 ```
+
+다음으로는 예제에 사용할 스키마를 정의하고, 스키마를 바탕으로 코드를 생성해봅시다.

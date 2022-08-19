@@ -21,9 +21,8 @@ implementing the socket in platform-specific way.
 - Glue: Platform-specific code for implementing sockets.
 
 Each resources should exist only one throughout the lifecycle of an application
-that uses WRP. Except in special situations such as iframe socket, Data and
-messages are consumed without being shared across resources. So, You must ensure
-the uniqueness of the socket or channel.
+that uses WRP. Data and messages are consumed without being shared across
+resources. So, You must ensure the uniqueness of the socket or channel.
 
 ## Message
 

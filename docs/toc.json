@@ -1,3 +1,10 @@
 {
-  "introduction": []
+  "introduction": [],
+  "web-example": [
+    "install-dependencies",
+    "define-schema",
+    "iframe-client",
+    "implement-client",
+    "implement-server"
+  ]
 }
