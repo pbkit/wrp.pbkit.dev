@@ -16,3 +16,5 @@ WRP는 위의 문제점을 아래와 같이 해결합니다.
 
 WRP는 TypeScript(React), Swift, Kotlin 라이브러리를 제공하며, Protocol Buffers를 이용한 코드 생성은
 pbkit CLI를 통해서 이루어집니다.
+
+다음으로 WRP를 사용하는 데에 필요한 준비물을 설치하고, 각 플랫폼에 따른 예제를 만들어보도록 하겠습니다.
