@@ -22,15 +22,6 @@ export default function Home() {
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
         />
       </Head>
-      <section class={tw`p-4 tracking-tight bg-[#00000044]`}>
-        <p class={tw`max-w-screen-lg mx-auto px-4`}>
-          ⚠️ Working in progress. For WRP docs, see{' '}
-          <a href="https://pbkit.dev" class={tw`text-amber-500`}>
-            pbkit docs
-          </a>{' '}
-          instead.
-        </p>
-      </section>
       <div class={tw`flex flex-col items-center justify-between flex-grow`}>
         <div class={tw`flex flex-col max-w-screen-lg w-full items-stretch`}>
           <section class={tw`flex flex-col p-4 tracking-tight`}>
@@ -45,7 +36,7 @@ export default function Home() {
                   🌯
                 </h1>
                 <div class={tw`flex gap-6 items-center`}>
-                  <a class={tw`text(xl sm:2xl) font-bold`}>Docs</a>
+                  <a href="/docs" class={tw`text(xl sm:2xl) font-bold`}>Docs</a>
                   <a
                     href="https://github.com/pbkit/wrp-ts"
                     target="_blank"
