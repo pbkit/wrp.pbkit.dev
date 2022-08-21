@@ -17,7 +17,7 @@ export default function Navbar({ active }: NavbarProps) {
       name: 'Docs',
       href: '/docs',
     },
-    { name: 'Github', href: 'https://github.com/pbkit' },
+    { name: 'Github', href: 'https://github.com/pbkit/wrp.pbkit.dev' },
   ];
 
   return (
