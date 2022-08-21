@@ -1,11 +1,11 @@
-## Resources
+## Concept
 
-WRP has resources that are isolated for each particular purpose like the OSI-7
-layer to provide a communication layer.
+WRP is a protocol for providing communication capabilities to the Protobuf service.
+Instead of designing a separate protocol for each platform, the protocol is abstracted into several concepts, and the implementation of concepts other than socket is designed to be shared by all platforms.
 
-Sockets and channels are used to implement message communication.
+Sockets and channels are used to one way message communication.
 
-- Socket: Transports binary data between the two platforms
+- Socket: Transports binary data between the two platforms.
 - Channel: Transports data in form of message over the socket.
 
 Guests and hosts are divided according to the purpose of using messages that are
@@ -14,7 +14,7 @@ transported over channels.
 - Guest: Sends requests over the channel.
 - Host: Processes requests from guests and sends responses.
 
-Additionally, each platform (Web, iframe, iOS, Android) has a different form of
+Since each platform (Web, iframe, iOS, Android) has a different form of
 low-level API and different communication methods. So `Glue` exists for
 implementing the socket in platform-specific way.
 
