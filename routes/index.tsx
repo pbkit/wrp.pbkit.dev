@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div class={tw`flex flex-col min-h-screen`}>
       <Head>
-        <title>WRP 🌯 - Webview/worker request protocol</title>
-        <meta name="description" content="Webview/worker request protocol" />
+        <title>WRP 🌯 - Webview request protocol</title>
+        <meta name="description" content="Webview request protocol" />
         <link
           rel="stylesheet"
           as="style"
@@ -36,7 +36,9 @@ export default function Home() {
                   🌯
                 </h1>
                 <div class={tw`flex gap-6 items-center`}>
-                  <a href="/docs" class={tw`text(xl sm:2xl) font-bold`}>Docs</a>
+                  <a href="/docs" class={tw`text(xl sm:2xl) font-bold`}>
+                    Docs
+                  </a>
                   <a
                     href="https://github.com/pbkit/wrp-ts"
                     target="_blank"
@@ -61,8 +63,7 @@ export default function Home() {
               <p
                 class={tw`text(2xl sm:3xl gray-200) font-bold tracking-tighter`}
               >
-                Webview<span class={tw`text-gray-300`}>/Worker</span> Request
-                Protocol
+                Webview Request Protocol
               </p>
             </div>
             <p class={tw`text(xl sm:2xl gray-400) font-bolder`}>
