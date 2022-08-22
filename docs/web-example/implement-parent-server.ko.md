@@ -1,4 +1,4 @@
-## 서버(호스트) 구현하기
+## 부모에 서버(호스트) 구현하기
 
 이전 단계에서 만든 클라이언트(게스트)에 rpc를 제공해줄 서버(호스트)를 만들어 보겠습니다.
 
@@ -29,7 +29,7 @@ export default Server;
 
 ```tsx
 import React from "react";
-+ import {createPrimitiveWrpAtomSetAtom} from "@pbkit/wrp-jotai/pwasa";
++ import { createPrimitiveWrpAtomSetAtom } from "@pbkit/wrp-jotai/pwasa";
 
 + const pwasa = createPrimitiveWrpAtomSetAtom();
 ```
@@ -40,7 +40,7 @@ element으로 WRP 자원을 만들고 `pwasa`를 업데이트 해주어야 합�
 ```tsx
 import React from "react";
 import { createPrimitiveWrpAtomSetAtom } from "@pbkit/wrp-jotai/pwasa";
-import { useIframeWrpAtomSetUpdateEffect } from "@pbkit/wrp-jotai/iframe";
++ import { useIframeWrpAtomSetUpdateEffect } from "@pbkit/wrp-jotai/iframe";
 
 const pwasa = createPrimitiveWrpAtomSetAtom();
 
@@ -83,7 +83,7 @@ const Server = () => {
 
 ```tsx
 import React from "react";
-import { createPrimitiveWrpAtomSetAtom, channel } from "@pbkit/wrp-jotai/pwasa";
+import { createPrimitiveWrpAtomSetAtom, useChannel } from "@pbkit/wrp-jotai/pwasa";
 import { useIframeWrpAtomSetUpdateEffect } from "@pbkit/wrp-jotai/iframe";
 + import { useWrpServer } from "@pbkit/wrp-react";
 + import { methodDescriptors } from "../generated/services/pbkit/wrp/example/WrpExampleService";
@@ -113,4 +113,12 @@ const Server = () => {
 
 `useWrpServer`에 있는 세 번째 인자에 주목해주세요. 세 번째 인자에는 `[methodDescriptor, function]`로 된
 메소드 구현의 배열을 받습니다. 각 요청이 올때마다, 알맞은 `methodDescriptor`의 등록된 함수가 실행되게 됩니다. 함수 에는
-`res` 객체가 전달되며 `res`를 통해 응답의 헤더, 내용(payload), 마지막을 정할 수 있습니다.
+`res` 객체가 전달되며 `res`를 통해 응답의 헤더, 내용(payload), 트레일러를 전송할 수 있습니다.
+
+이제 iframe 내에 있는, 이전 단계에 구현한 클라이언트의 버튼을 눌러보세요. 그러면 결과에 `hello`가 뜨는 것을 볼 수 있습니다!
+
+다음 섹션에서는 나머지(부모 윈도우에 클라이언트, 자식 윈도우에 서버) 구현을 통해 WRP의 모든 기능을 사용하는 법을 알아보겠습니다.
+
+이번 섹션에서 구현한 내용을 아래에서 확인해보세요!
+
+<iframe width="100%" height="500px" src="https://stackblitz.com/edit/nextjs-wegj6e?embed=1&file=pages/server.tsx&initialPath=%2Fserver" />

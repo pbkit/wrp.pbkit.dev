@@ -141,7 +141,9 @@ function Content(props: { page: Page }) {
   const main = tw`py-8 pt-4 overflow-hidden w-full`;
   const title = tw`text(4xl gray-100) tracking-tight font-extrabold md:mt-6`;
   const body = tw`mt-6`;
-  const html = gfm.render(props.page.markdown);
+  const html = gfm.render(props.page.markdown, {
+    allowIframes: true,
+  });
   return (
     <main class={main}>
       <h1 class={title}>{props.page.title}</h1>

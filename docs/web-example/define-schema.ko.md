@@ -11,27 +11,20 @@ package pbkit.wrp.example;
 
 service WrpExampleService {
   rpc GetTextValue(GetTextValueRequest) returns (GetTextValueResponse);
-  rpc GetSliderValue(GetSliderValueRequest) returns (stream GetSliderValueResponse);
 }
 
 message GetTextValueRequest {}
 message GetTextValueResponse {
   string text = 1;
 }
-message GetSliderValueRequest {}
-message GetSliderValueResponse {
-  int32 value = 1;
-}
 ```
 
-스키마에는 4개의 메세지와 2개의 rpc가 구현되어 있는 서비스(WrpExampleService)가 선언되어 있습니다.
+스키마에는 2개의 메세지와 1개의 rpc가 구현되어 있는 서비스(WrpExampleService)가 선언되어 있습니다.
 
 - GetTextValue: 서버(호스트)로부터 하나의 text 값을 받는 rpc입니다.
-- GetSliderValue: 서버(호스트)로부터 value 값을 여러번 받는 rpc입니다. GetTextValue와 달리 응답이 여러번 올
-  수 있음을 기억하세요.
 
-이제부터 만들 예제는 WrpExampleService의 GetTextValue, GetSliderValue를 호출해 값을 받아오는
-클라이언트(게스트)와 게스트의 요청에 따라 값을 전달해주는 서버(호스트)를 구현하도록 하겠습니다.
+이제부터 만들 예제는 WrpExampleService의 GetTextValue를 호출해 값을 받아오는 클라이언트(게스트)와 게스트의 요청에 따라
+값을 전달해주는 서버(호스트)를 구현하도록 하겠습니다.
 
 ## 코드 생성하기
 

@@ -3,7 +3,8 @@
   "web-example": [
     "install-dependencies",
     "define-schema",
-    "implement-client",
-    "implement-server"
+    "implement-child-client",
+    "implement-parent-server",
+    "implement-client-and-server"
   ]
 }
