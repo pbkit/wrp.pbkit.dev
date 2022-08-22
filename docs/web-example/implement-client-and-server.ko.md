@@ -78,7 +78,7 @@ const pwasa = createPrimitiveWrpAtomSetAtom();
 
 const Client = () => {
   const { iframeRef } = useIframeWrpAtomSetUpdateEffect(pwasa);
-  const clientImpl = useClientImpl();
+  const clientImpl = useClientImpl(pwasa);
   const serviceClient = useMemo(() => {
     if (!clientImpl) return;
     return createServiceClient(clientImpl);
@@ -103,7 +103,7 @@ const pwasa = createPrimitiveWrpAtomSetAtom();
 
 const Server = () => {
   const { iframeRef } = useIframeWrpAtomSetUpdateEffect(pwasa);
-  const channel = useChannel();
+  const channel = useChannel(pwasa);
   useWrpServer(channel, {}, [
     [
       methodDescriptors.getTextValue,
