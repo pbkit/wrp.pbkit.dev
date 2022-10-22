@@ -90,16 +90,20 @@ export default function Home() {
           <section
             class={tw`flex justify-center gap-4 p-4 tracking-tight text-right`}
           >
-            <button
-              class={tw`px-6 py-3 rounded-full bg-gradient-to-br from-amber-200 to-red-500 text(l sm:xl black) font-bold`}
+            <a
+              href="https://wrp-demo.vercel.app/iframe-example"
+              target="_blank"
+              rel="noreferrer"
+              class={tw`d-inline-block px-6 py-3 rounded-full bg-gradient-to-br from-amber-200 to-red-500 text(l sm:xl black) font-bold`}
             >
               Watch example →
-            </button>
-            <button
+            </a>
+            <a
+              href="/docs"
               class={tw`px-6 py-3 rounded-full bg-gradient-to-br from-amber-200 to-red-500 text(l sm:xl black) font-bold`}
             >
               Get started →
-            </button>
+            </a>
           </section>
           <section class={tw`flex flex-col p-4 tracking-tight gap-4`}>
             <h1 class={tw`text(2xl sm:3xl) font-extrabold`}>Libraries</h1>
